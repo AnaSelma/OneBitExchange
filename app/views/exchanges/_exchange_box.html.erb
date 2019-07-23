@@ -16,6 +16,11 @@
           <div class='form-group'>
             <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required>
           </div>
+          <div class='card-icons text-center'>
+            <button type="button" class="btn-light btn-lg centered" id="btnInvert">
+              <img src="<%= image_path('swap_vert.png')%>">
+            </button>
+          </div>
         </div>
 
         <div class='destination_currency'>
@@ -27,9 +32,9 @@
             <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>
           </div>
         </div>
-        <div>
-          <button type='submit' class='btn btn-primary btn-exchange col-md-12'>CONVERTER</button>
-        </div>
+        <!-- <div>
+          <button id="btnInvert">Convert</button>
+        </div> -->
       <% end %>
     </div>
   </div>

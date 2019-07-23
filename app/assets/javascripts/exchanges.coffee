@@ -15,3 +15,16 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false;
+
+
+  $("#amount").keyup ->
+    if $(this).val() != ""
+      $('form').submit()
+
+  $('#btnInvert').click (e) ->
+    source_currency = $('#source_currency').val()
+    target_currency = $('#target_currency').val()
+    e.preventDefault();
+    $('#source_currency').val(target_currency)
+    $('#target_currency').val(source_currency)
+    $('form').submit()
